@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <nav>
+        <div class="title">
+          Pinhole Simulator
+        </div>
+      </nav>
+      <div class="content">
+        <PinholeSim></PinholeSim>
+      </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PinholeSim from './components/PinholeSim.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    PinholeSim
   }
 }
 </script>
@@ -21,8 +27,22 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
+nav {
+    padding: 0;
+    background: #e0f0fa;
+}
+  
+.title {
+    padding: 0.7em .8em;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.content {
+  align-content: center;
+}
+
 </style>
